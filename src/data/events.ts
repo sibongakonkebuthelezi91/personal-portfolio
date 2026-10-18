@@ -38,8 +38,8 @@ export const events: SiteEvent[] = [
   },
 ];
 
-export const eventMoments = [
-  events[0].photos[0],
-  events[0].photos[1],
-  events[1].photos[0],
-];
+const yteWinner = { src: yteWinnerPhoto.url, alt: "Holding the YTE Hackathon Winner (G13) trophy" };
+const ytePresentation = { src: ytePresentationPhoto.url, alt: "Presenting GridWise on stage at the YTE Hackathon" };
+const awsSummitGroup = { src: awsSummitPhoto.url, alt: "With friends outside the AWS Summit venue" };
+
+export const eventMoments = [yteWinner, ytePresentation, awsSummitGroup];
