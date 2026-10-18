@@ -27,27 +27,29 @@
 
 :root {
   --radius: 0.75rem;
-  --background: oklch(0.97 0.012 85);
-  --foreground: oklch(0.22 0.02 60);
-  --card: oklch(0.99 0.008 85);
-  --card-foreground: oklch(0.22 0.02 60);
-  --primary: oklch(0.52 0.15 40);
-  --primary-foreground: oklch(0.98 0.01 85);
-  --secondary: oklch(0.92 0.02 85);
-  --secondary-foreground: oklch(0.22 0.02 60);
-  --muted: oklch(0.93 0.015 85);
-  --muted-foreground: oklch(0.5 0.02 60);
-  --accent: oklch(0.42 0.06 160);
-  --accent-foreground: oklch(0.98 0.01 85);
-  --border: oklch(0.86 0.02 80);
-  --input: oklch(0.86 0.02 80);
-  --ring: oklch(0.52 0.15 40);
+  --background: oklch(0.14 0.02 240);
+  --foreground: oklch(0.96 0.014 240);
+  --card: oklch(0.19 0.02 240);
+  --card-foreground: oklch(0.96 0.014 240);
+  --primary: oklch(0.68 0.13 226);
+  --primary-foreground: oklch(0.98 0.006 240);
+  --secondary: oklch(0.25 0.02 240);
+  --secondary-foreground: oklch(0.94 0.012 240);
+  --muted: oklch(0.23 0.02 240);
+  --muted-foreground: oklch(0.74 0.018 240);
+  --accent: oklch(0.71 0.09 42);
+  --accent-foreground: oklch(0.12 0.02 240);
+  --border: oklch(0.31 0.025 240);
+  --input: oklch(0.22 0.02 240);
+  --ring: oklch(0.72 0.12 226);
 }
 
 @layer base {
   * { border-color: var(--color-border); }
   body {
-    background-color: var(--color-background);
+    background:
+      radial-gradient(circle at top, rgba(112, 126, 147, 0.22), transparent 32%),
+      linear-gradient(180deg, var(--color-background) 0%, #0b1119 100%);
     color: var(--color-foreground);
     font-family: var(--font-sans);
   }
