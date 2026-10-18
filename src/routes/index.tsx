@@ -107,6 +107,16 @@ function Index() {
                 <div>
                   <h3 className="text-xl">{e.title}</h3>
                   <p className="mt-1 text-muted-foreground">{e.text}</p>
+                  {"url" in e && (
+                    <a
+                      href={e.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-2 inline-block text-sm font-medium text-primary hover:underline"
+                    >
+                      Verify credential →
+                    </a>
+                  )}
                 </div>
               </div>
             ))}

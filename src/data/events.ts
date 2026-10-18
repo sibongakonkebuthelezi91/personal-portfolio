@@ -42,6 +42,20 @@ export const events: SiteEvent[] = [
       { src: awsSummitHallPhoto.url, alt: "Working at laptops in the main hall of the AWS Summit" },
     ],
   },
+  {
+    name: "Build With AI Soweto",
+    tag: "Hack & Workshop",
+    text: "Hacking AI with GDG Soweto — hands-on session exploring developer tooling, practical AI applications, and connecting with local developers.",
+    postUrl: "https://www.linkedin.com/posts/sibongakonke-buthelezi-274b76344_activity-7448800481642151936-IpVk",
+    photos: [],
+  },
+  {
+    name: "AWS Cloud Event · Sandton",
+    tag: "Tech Session",
+    text: "Attended an AWS Cloud gathering in Sandton exploring enterprise cloud architecture, AWS services, and developer best practices.",
+    postUrl: "https://www.linkedin.com/posts/sibongakonke-buthelezi-274b76344_activity-7466531114040320002-G95M",
+    photos: [],
+  },
 ];
 
 const yteWinner = { src: yteWinnerPhoto.url, alt: "Holding the YTE Hackathon Winner (G13) trophy" };

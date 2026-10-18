@@ -61,6 +61,17 @@ export const projects = [
 
 export const education = [
   {
+    title: "Scientific Computing with Python · freeCodeCamp",
+    years: "Verified Credential",
+    text: "Demonstrates proficiency in Python fundamentals, algorithm design, data structures, and object-oriented programming through 5 hands-on projects.",
+    url: "https://freecodecamp.org/certification/sibongakonke/python-v9",
+  },
+  {
+    title: "Software Development · WeThinkCode_ (Soweto Campus)",
+    years: "2025 — Present",
+    text: "Second-year software engineering student covering peer-to-peer software development, data structures, algorithms, object-oriented programming in Python and Java, testing, and team-driven project sprints.",
+  },
+  {
     title: "Certificate in Business Management (N6)",
     years: "2023",
     text: "A business perspective on software: understanding that technology must support real processes and user needs, with stronger communication, problem-solving and stakeholder-management skills.",
