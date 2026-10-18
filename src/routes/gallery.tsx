@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteNav, PhotoSlot } from "@/components/SiteNav";
 import { HighlightCard } from "@/components/Highlight";
 import { highlights, featuredHighlight } from "@/data/highlights";
+import { events } from "@/data/events";
 
 const poster = featuredHighlight.poster;
 
@@ -18,12 +19,6 @@ export const Route = createFileRoute("/gallery")({
   }),
   component: Gallery,
 });
-
-const events = [
-  { name: "Event name", date: "Month 2026", text: "What it was and what you took away from it." },
-  { name: "Conference or workshop", date: "Month 2025", text: "Who you met or what you presented." },
-  { name: "Volunteer day", date: "Month 2025", text: "A short note about your contribution." },
-];
 
 function Gallery() {
   return (
@@ -52,11 +47,21 @@ function Gallery() {
 
         <h2 className="mt-16 text-2xl">Events</h2>
         <div className="mt-6 space-y-12">
-          {events.map((e, i) => (
-            <article key={i} className="grid gap-6 md:grid-cols-2">
-              <PhotoSlot label="Event photo" className="aspect-video" />
+          {events.map((e) => (
+            <article key={e.name} className="grid gap-6 md:grid-cols-[2fr_1fr]">
+              <div className="grid gap-4 sm:grid-cols-2">
+                {e.photos.map((p) => (
+                  <img
+                    key={p.src}
+                    src={p.src}
+                    alt={p.alt}
+                    loading="lazy"
+                    className="aspect-video w-full rounded-lg object-cover"
+                  />
+                ))}
+              </div>
               <div className="self-center">
-                <p className="text-sm font-semibold uppercase tracking-widest text-accent">{e.date}</p>
+                <p className="text-sm font-semibold uppercase tracking-widest text-accent">{e.tag}</p>
                 <h3 className="mt-2 text-2xl">{e.name}</h3>
                 <p className="mt-2 text-muted-foreground">{e.text}</p>
               </div>

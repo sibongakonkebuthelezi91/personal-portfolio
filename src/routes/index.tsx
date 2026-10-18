@@ -3,6 +3,7 @@ import { SiteNav, PhotoSlot } from "@/components/SiteNav";
 import { HighlightCard } from "@/components/Highlight";
 import { featuredHighlight } from "@/data/highlights";
 import { profile, skillGroups, experience, projects, education } from "@/data/profile";
+import { eventMoments } from "@/data/events";
 
 const poster = featuredHighlight.poster;
 
@@ -112,9 +113,11 @@ function Index() {
           <Link to="/gallery" className="font-medium text-primary hover:underline">See all photos →</Link>
         </div>
         <div className="mt-8 grid gap-4 sm:grid-cols-3">
-          <PhotoSlot label="Event photo" className="aspect-square" />
-          <PhotoSlot label="Event photo" className="aspect-square" />
-          <PhotoSlot label="Event photo" className="aspect-square" />
+          {eventMoments.map((p) => (
+            <Link to="/gallery" key={p.src} className="group block overflow-hidden rounded-lg">
+              <img src={p.src} alt={p.alt} loading="lazy" className="aspect-square w-full object-cover transition group-hover:scale-105" />
+            </Link>
+          ))}
         </div>
       </section>
 
