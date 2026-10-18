@@ -1,5 +1,7 @@
 // Real details from Sibongakonke's CV — one place for every page to read from.
 import cvAsset from "@/assets/cv.pdf.asset.json";
+import portraitAsset from "@/assets/portrait.jpg.asset.json";
+
 
 export const profile = {
   name: "Sibongakonke Buthelezi",
@@ -8,7 +10,11 @@ export const profile = {
   email: "sibongakonkebuthelezi91@gmail.com",
   phone: "066 448 4226",
   github: "https://github.com/sibongakonkebuthelezi91",
+  linkedin: "https://www.linkedin.com/in/sibongakonke-buthelezi-274b76344",
+
   cvUrl: cvAsset.url,
+  photo: portraitAsset.url,
+
   intro:
     "I'm a software developer who builds web applications, backend services and database-driven systems — strongest in Python, with hands-on experience in Flask, Django, JavaScript, Docker and CI/CD. I enjoy understanding a system end to end: from requirements and user experience to backend logic, testing and deployment.",
 };

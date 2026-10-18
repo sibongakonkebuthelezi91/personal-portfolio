@@ -3,6 +3,8 @@ import { SiteNav, PhotoSlot } from "@/components/SiteNav";
 import { HighlightCard } from "@/components/Highlight";
 import { highlights, featuredHighlight } from "@/data/highlights";
 import { events } from "@/data/events";
+import { profile } from "@/data/profile";
+
 
 const poster = featuredHighlight.poster;
 
@@ -40,12 +42,19 @@ function Gallery() {
 
         <h2 className="mt-16 text-2xl">About me</h2>
         <div className="mt-6 grid gap-4 sm:grid-cols-3">
+          <img src={profile.photo} alt="Sibongakonke Buthelezi" className="aspect-[4/5] w-full rounded-lg border bg-card object-cover object-top" />
           <PhotoSlot label="Photo of you" className="aspect-[4/5]" />
           <PhotoSlot label="Photo of you" className="aspect-[4/5]" />
-          <PhotoSlot label="Photo of you" className="aspect-[4/5]" />
+
         </div>
 
-        <h2 className="mt-16 text-2xl">Events</h2>
+        <div className="mt-16 flex flex-wrap items-end justify-between gap-3">
+          <h2 className="text-2xl">Events</h2>
+          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-primary hover:underline">
+            More posts on LinkedIn →
+          </a>
+        </div>
+
         <div className="mt-6 space-y-12">
           {events.map((e) => (
             <article key={e.name} className="grid gap-6 md:grid-cols-[2fr_1fr]">
@@ -64,7 +73,16 @@ function Gallery() {
                 <p className="text-sm font-semibold uppercase tracking-widest text-accent">{e.tag}</p>
                 <h3 className="mt-2 text-2xl">{e.name}</h3>
                 <p className="mt-2 text-muted-foreground">{e.text}</p>
+                <a
+                  href={e.postUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-4 inline-block text-sm font-medium text-primary hover:underline"
+                >
+                  Read the {e.name} post on LinkedIn →
+                </a>
               </div>
+
             </article>
           ))}
         </div>

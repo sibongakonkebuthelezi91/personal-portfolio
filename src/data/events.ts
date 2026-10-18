@@ -13,14 +13,18 @@ export type SiteEvent = {
   name: string;
   tag: string;
   text: string;
+  postUrl: string;
   photos: EventPhoto[];
 };
+
 
 export const events: SiteEvent[] = [
   {
     name: "YTE Hackathon",
     tag: "Winner",
     text: "Won the YTE Hackathon (G13) — photos from our GridWise presentation on stage and the moment with the trophy.",
+    postUrl: "https://www.linkedin.com/posts/sibongakonke-buthelezi-274b76344_wethinkcode-hackathonwinner-softwaredevelopment-activity-7481424278475849728-xCLs",
+
     photos: [
       { src: yteWinnerPhoto.url, alt: "Holding the YTE Hackathon Winner (G13) trophy" },
       { src: ytePresentationPhoto.url, alt: "Presenting GridWise on stage at the YTE Hackathon" },
@@ -31,6 +35,8 @@ export const events: SiteEvent[] = [
     name: "AWS Summit",
     tag: "Conference",
     text: "Attended the AWS Summit — talks, the expo floor and time with fellow attendees.",
+    postUrl: "https://www.linkedin.com/posts/sibongakonke-buthelezi-274b76344_aws-softwareengineer-ai-activity-7495915858137980928-Q88R",
+
     photos: [
       { src: awsSummitPhoto.url, alt: "With friends outside the AWS Summit venue" },
       { src: awsSummitHallPhoto.url, alt: "Working at laptops in the main hall of the AWS Summit" },
