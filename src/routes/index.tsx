@@ -1,5 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { SiteNav, PhotoSlot } from "@/components/SiteNav";
+import { SiteNav } from "@/components/SiteNav";
 import { HighlightCard } from "@/components/Highlight";
 import { featuredHighlight } from "@/data/highlights";
 import { profile, skillGroups, experience, projects, education } from "@/data/profile";
@@ -38,7 +38,12 @@ function Index() {
 
           </div>
         </div>
-        <PhotoSlot label="Your portrait photo" className="aspect-[4/5] w-full" />
+        <img
+          src={profile.photo}
+          alt="Sibongakonke Buthelezi"
+          className="aspect-[4/5] w-full rounded-lg border bg-card object-cover object-top"
+        />
+
       </header>
 
       <section className="border-y bg-card">

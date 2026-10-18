@@ -42,9 +42,10 @@ function Gallery() {
 
         <h2 className="mt-16 text-2xl">About me</h2>
         <div className="mt-6 grid gap-4 sm:grid-cols-3">
+          <img src={profile.photo} alt="Sibongakonke Buthelezi" className="aspect-[4/5] w-full rounded-lg border bg-card object-cover object-top" />
           <PhotoSlot label="Photo of you" className="aspect-[4/5]" />
           <PhotoSlot label="Photo of you" className="aspect-[4/5]" />
-          <PhotoSlot label="Photo of you" className="aspect-[4/5]" />
+
         </div>
 
         <div className="mt-16 flex flex-wrap items-end justify-between gap-3">
