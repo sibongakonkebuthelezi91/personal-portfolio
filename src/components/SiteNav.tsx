@@ -3,10 +3,10 @@ import { Link } from "@tanstack/react-router";
 export function SiteNav() {
   return (
     <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6">
-      <Link to="/" className="font-display text-xl font-semibold">Your Name</Link>
+      <Link to="/" className="font-display text-xl font-semibold">Sibongakonke Buthelezi</Link>
       <div className="flex gap-6 text-sm font-medium">
         <Link to="/" className="hover:text-primary" activeProps={{ className: "text-primary" }} activeOptions={{ exact: true }}>Home</Link>
-        <Link to="/gallery" className="hover:text-primary" activeProps={{ className: "text-primary" }}>Photos & Events</Link>
+        <Link to="/gallery" className="hover:text-primary" activeProps={{ className: "text-primary" }}>Photos &amp; Events</Link>
         <a href="mailto:you@example.com" className="rounded-full bg-primary px-4 py-2 text-primary-foreground hover:opacity-90">Contact</a>
       </div>
     </nav>
