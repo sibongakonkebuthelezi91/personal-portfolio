@@ -34,6 +34,8 @@ function Index() {
             <a href={`mailto:${profile.email}`} className="rounded-full bg-primary px-6 py-3 font-medium text-primary-foreground hover:opacity-90">Get in touch</a>
             <a href={profile.cvUrl} download className="rounded-full border px-6 py-3 font-medium hover:bg-secondary">Download CV</a>
             <a href={profile.github} target="_blank" rel="noopener noreferrer" className="rounded-full border px-6 py-3 font-medium hover:bg-secondary">GitHub</a>
+            <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="rounded-full border px-6 py-3 font-medium hover:bg-secondary">LinkedIn</a>
+
           </div>
         </div>
         <PhotoSlot label="Your portrait photo" className="aspect-[4/5] w-full" />
@@ -110,7 +112,11 @@ function Index() {
       <section className="mx-auto max-w-6xl px-6 py-16">
         <div className="flex items-end justify-between">
           <h2 className="text-3xl">Events &amp; moments</h2>
-          <Link to="/gallery" className="font-medium text-primary hover:underline">See all photos →</Link>
+          <div className="flex flex-wrap items-center gap-6">
+            <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="font-medium text-primary hover:underline">More posts on LinkedIn →</a>
+            <Link to="/gallery" className="font-medium text-primary hover:underline">See all photos →</Link>
+          </div>
+
         </div>
         <div className="mt-8 grid gap-4 sm:grid-cols-3">
           {eventMoments.map((p) => (
@@ -122,7 +128,9 @@ function Index() {
       </section>
 
       <footer className="border-t py-8 text-center text-sm text-muted-foreground">
-        © {new Date().getFullYear()} {profile.name} · {profile.email} · {profile.phone}
+        © {new Date().getFullYear()} {profile.name} · {profile.email} · {profile.phone} ·{" "}
+        <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">LinkedIn</a>
+
       </footer>
     </div>
   );
