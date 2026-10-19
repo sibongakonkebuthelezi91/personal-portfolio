@@ -1,10 +1,10 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { SiteNav, PhotoSlot } from "@/components/SiteNav";
+import { SiteNav } from "@/components/SiteNav";
 import { HighlightCard } from "@/components/Highlight";
+import { Timeline } from "@/components/Timeline";
 import { highlights, featuredHighlight } from "@/data/highlights";
-import { events } from "@/data/events";
+import { events, timeline } from "@/data/events";
 import { profile } from "@/data/profile";
-
 
 const poster = featuredHighlight.poster;
 
@@ -41,15 +41,22 @@ function Gallery() {
         </div>
 
         <h2 className="mt-16 text-2xl">About me</h2>
-        <div className="mt-6 grid gap-4 sm:grid-cols-3">
-          <img src={profile.photo} alt="Sibongakonke Buthelezi" className="aspect-[4/5] w-full rounded-lg border bg-card object-cover object-top" />
-          <PhotoSlot label="Photo of you" className="aspect-[4/5]" />
-          <PhotoSlot label="Photo of you" className="aspect-[4/5]" />
-
+        <div className="mt-6 grid gap-6 sm:grid-cols-[minmax(0,13rem)_1fr] sm:items-center">
+          <img
+            src={profile.photo}
+            alt="Sibongakonke Buthelezi"
+            className="aspect-[4/5] w-full rounded-lg border bg-card object-cover object-top"
+          />
+          <p className="text-muted-foreground">{profile.intro}</p>
         </div>
 
+        <p className="mt-10 max-w-xl text-sm text-muted-foreground">
+          One picture per event, oldest first. Each date is when that event's own LinkedIn post went out.
+        </p>
+        <Timeline items={timeline} />
+
         <div className="mt-16 flex flex-wrap items-end justify-between gap-3">
-          <h2 className="text-2xl">Events</h2>
+          <h2 className="text-2xl">Every photo by event</h2>
           <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-primary hover:underline">
             More posts on LinkedIn →
           </a>
