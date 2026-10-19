@@ -27,7 +27,7 @@ function Index() {
       <SiteNav />
       <header className="mx-auto grid max-w-6xl items-center gap-12 px-6 py-16 md:grid-cols-2">
         <div>
-          <p className="text-sm font-semibold uppercase tracking-widest text-accent">Software Engineer · Johannesburg · Open to opportunities</p>
+          <p className="font-mono text-sm font-semibold uppercase tracking-widest text-accent">Software Engineer · Johannesburg · Open to opportunities</p>
           <h1 className="mt-4 text-5xl leading-tight md:text-6xl">Hi, I'm Sibongakonke.</h1>
           <p className="mt-6 max-w-md text-lg text-muted-foreground">{profile.intro}</p>
           <div className="mt-8 flex flex-wrap gap-3">
@@ -61,7 +61,7 @@ function Index() {
         <div className="mt-8 space-y-6">
           {skillGroups.map((g) => (
             <div key={g.label}>
-              <h3 className="text-sm font-semibold uppercase tracking-widest text-accent">{g.label}</h3>
+              <h3 className="font-mono text-sm font-semibold uppercase tracking-widest text-accent">{g.label}</h3>
               <div className="mt-3 flex flex-wrap gap-3">
                 {g.items.map((s) => (
                   <span key={s} className="rounded-full bg-secondary px-4 py-2 text-sm font-medium">{s}</span>
@@ -91,7 +91,7 @@ function Index() {
           <div className="mt-8 grid gap-6 md:grid-cols-3">
             {projects.map((p) => (
               <a key={p.name} href={p.url} target="_blank" rel="noopener noreferrer" className="rounded-lg border bg-background p-6 hover:border-primary">
-                <p className="text-xs font-semibold uppercase tracking-widest text-accent">{p.stack}</p>
+                <p className="font-mono text-xs font-semibold uppercase tracking-widest text-accent">{p.stack}</p>
                 <h3 className="mt-2 text-xl">{p.name}</h3>
                 <p className="mt-2 text-sm text-muted-foreground">{p.text}</p>
                 <p className="mt-4 text-sm font-medium text-primary">View on GitHub →</p>
