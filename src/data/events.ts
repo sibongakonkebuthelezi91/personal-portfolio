@@ -60,7 +60,8 @@ export const events: SiteEvent[] = [
     tag: "Hack & Workshop",
     text: "Hacking AI with GDG Soweto — hands-on session exploring developer tooling, practical AI applications, and connecting with local developers.",
     date: "2026-04-11",
-    postUrl: "https://www.linkedin.com/posts/sibongakonke-buthelezi-274b76344_activity-7448800481642151936-IpVk",
+    postUrl:
+      "https://www.linkedin.com/posts/sibongakonke-buthelezi-274b76344_activity-7448800481642151936-IpVk",
     cover: buildWithAi,
     photos: [buildWithAi],
   },
@@ -69,7 +70,8 @@ export const events: SiteEvent[] = [
     tag: "Tech Session",
     text: "Attended an AWS Cloud gathering in Sandton exploring enterprise cloud architecture, AWS services, and developer best practices.",
     date: "2026-05-30",
-    postUrl: "https://www.linkedin.com/posts/sibongakonke-buthelezi-274b76344_activity-7466531114040320002-G95M",
+    postUrl:
+      "https://www.linkedin.com/posts/sibongakonke-buthelezi-274b76344_activity-7466531114040320002-G95M",
     cover: awsSandton,
     photos: [awsSandton],
   },
@@ -78,7 +80,8 @@ export const events: SiteEvent[] = [
     tag: "Winner",
     text: "Won the YTE Hackathon (G13) — photos from our GridWise presentation on stage and the moment with the trophy.",
     date: "2026-07-10",
-    postUrl: "https://www.linkedin.com/posts/sibongakonke-buthelezi-274b76344_wethinkcode-hackathonwinner-softwaredevelopment-activity-7481424278475849728-xCLs",
+    postUrl:
+      "https://www.linkedin.com/posts/sibongakonke-buthelezi-274b76344_wethinkcode-hackathonwinner-softwaredevelopment-activity-7481424278475849728-xCLs",
     cover: yteWinner,
     photos: [yteWinner, ytePresentation, yteAudience],
   },
@@ -87,7 +90,8 @@ export const events: SiteEvent[] = [
     tag: "Conference",
     text: "Attended the AWS Summit — talks, the expo floor and time with fellow attendees.",
     date: "2026-08-19",
-    postUrl: "https://www.linkedin.com/posts/sibongakonke-buthelezi-274b76344_aws-softwareengineer-ai-activity-7495915858137980928-Q88R",
+    postUrl:
+      "https://www.linkedin.com/posts/sibongakonke-buthelezi-274b76344_aws-softwareengineer-ai-activity-7495915858137980928-Q88R",
     cover: awsSummitGroup,
     photos: [awsSummitGroup, awsSummitHall],
   },
@@ -99,6 +103,7 @@ export type TimelineEntry = {
   tag: string;
   text: string;
   cover: EventPhoto | null;
+  videoSrc?: string;
   /** Tailwind object-position class for the cover; defaults to object-top. */
   coverClass?: string;
   url: string;
@@ -134,6 +139,7 @@ export const timeline: TimelineEntry[] = [
     tag: hackathonHighlight.tag,
     text: hackathonHighlight.text,
     cover: { src: hackathonHighlight.poster, alt: hackathonHighlight.posterAlt },
+    videoSrc: hackathonHighlight.videoSrc,
     // The video still is a candid audience shot: zoom onto the stage banner
     // so the blurred shoulder in the right foreground falls out of frame.
     coverClass: "origin-[28%_52%] scale-[1.55]",
