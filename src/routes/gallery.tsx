@@ -70,7 +70,7 @@ function Gallery() {
                 ))}
               </div>
               <div className="self-center">
-                <p className="text-sm font-semibold uppercase tracking-widest text-accent">{e.tag}</p>
+                <p className="font-mono text-sm font-semibold uppercase tracking-widest text-accent">{e.tag}</p>
                 <h3 className="mt-2 text-2xl">{e.name}</h3>
                 <p className="mt-2 text-muted-foreground">{e.text}</p>
                 <a

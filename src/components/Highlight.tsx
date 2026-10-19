@@ -42,7 +42,7 @@ export function HighlightCard({ item, className = "" }: { item: Highlight; class
         )}
       </div>
       <div>
-        <p className="text-sm font-semibold uppercase tracking-widest text-accent">{item.tag}</p>
+        <p className="font-mono text-sm font-semibold uppercase tracking-widest text-accent">{item.tag}</p>
         <h3 className="mt-2 text-2xl">{item.title}</h3>
         <p className="mt-3 text-muted-foreground">{item.text}</p>
         <p className="mt-5 font-medium text-primary underline-offset-4 group-hover:underline">{item.linkLabel} →</p>
