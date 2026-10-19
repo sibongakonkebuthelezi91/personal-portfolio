@@ -115,8 +115,9 @@ export const timeline: TimelineEntry[] = [
     tag: hackathonHighlight.tag,
     text: hackathonHighlight.text,
     cover: { src: hackathonHighlight.poster, alt: hackathonHighlight.posterAlt },
-    // The video still is mostly ceiling above the stage, so frame from the bottom.
-    coverClass: "object-bottom",
+    // The video still is a candid audience shot: zoom onto the stage banner
+    // so the blurred shoulder in the right foreground falls out of frame.
+    coverClass: "origin-[28%_52%] scale-[1.55]",
     url: hackathonHighlight.url,
     linkLabel: hackathonHighlight.linkLabel,
   },
