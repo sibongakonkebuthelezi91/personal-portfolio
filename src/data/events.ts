@@ -61,8 +61,8 @@ export const events: SiteEvent[] = [
     text: "Hacking AI with GDG Soweto — hands-on session exploring developer tooling, practical AI applications, and connecting with local developers.",
     date: "2026-04-11",
     postUrl: "https://www.linkedin.com/posts/sibongakonke-buthelezi-274b76344_activity-7448800481642151936-IpVk",
-    cover: null,
-    photos: [],
+    cover: buildWithAi,
+    photos: [buildWithAi],
   },
   {
     name: "AWS Cloud Event · Sandton",
@@ -70,8 +70,8 @@ export const events: SiteEvent[] = [
     text: "Attended an AWS Cloud gathering in Sandton exploring enterprise cloud architecture, AWS services, and developer best practices.",
     date: "2026-05-30",
     postUrl: "https://www.linkedin.com/posts/sibongakonke-buthelezi-274b76344_activity-7466531114040320002-G95M",
-    cover: null,
-    photos: [],
+    cover: awsSandton,
+    photos: [awsSandton],
   },
   {
     name: "YTE Hackathon",
