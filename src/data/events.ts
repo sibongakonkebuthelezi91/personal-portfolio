@@ -5,7 +5,7 @@ import buildWithAiPhoto from "@/assets/build-with-ai.jpg.asset.json";
 import ytePresentationPhoto from "@/assets/yte-hackathon-presentation.jpg.asset.json";
 import yteAudiencePhoto from "@/assets/yte-hackathon-audience.jpg.asset.json";
 import yteWinnerPhoto from "@/assets/yte-hackathon-winner.jpg.asset.json";
-import { hackathonHighlight } from "@/data/highlights";
+import { geekulchaHighlight, hackathonHighlight } from "@/data/highlights";
 
 export type EventPhoto = {
   src: string;
@@ -16,7 +16,7 @@ export type SiteEvent = {
   name: string;
   tag: string;
   text: string;
-  /** ISO date the event's own LinkedIn post went out — used to order the timeline. */
+  /** ISO date the event's own post went out — used to order the timeline. */
   date: string;
   postUrl: string;
   /** The one picture that stands for this event on the timeline. */
@@ -106,8 +106,8 @@ export type TimelineEntry = {
 };
 
 /**
- * One entry per event, oldest first — the MoMo hackathon comes from the
- * highlights file so its wording and picture stay in one place.
+ * One entry per event, oldest first — post wording and pictures for MoMo and
+ * Geekulcha come from the highlights file so they stay in one place.
  */
 export const timeline: TimelineEntry[] = [
   ...events.map((e) => ({
@@ -119,6 +119,15 @@ export const timeline: TimelineEntry[] = [
     url: e.postUrl,
     linkLabel: `Read the ${e.name} post on LinkedIn`,
   })),
+  {
+    date: geekulchaHighlight.date,
+    title: geekulchaHighlight.title,
+    tag: geekulchaHighlight.tag,
+    text: geekulchaHighlight.text,
+    cover: { src: geekulchaHighlight.poster, alt: geekulchaHighlight.posterAlt },
+    url: geekulchaHighlight.url,
+    linkLabel: geekulchaHighlight.linkLabel,
+  },
   {
     date: "2026-09-05",
     title: hackathonHighlight.title,

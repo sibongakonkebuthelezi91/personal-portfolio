@@ -51,7 +51,7 @@ function Gallery() {
         </div>
 
         <p className="mt-10 max-w-xl text-sm text-muted-foreground">
-          One picture per event, oldest first. Each date is when that event's own LinkedIn post went out.
+          One picture per event, oldest first. Each date is when that event's own post went out.
         </p>
         <Timeline items={timeline} />
 

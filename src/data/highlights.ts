@@ -1,6 +1,16 @@
-// One entry per video or write-up worth showing a recruiter.
-// `url` is the link a visitor clicks; `poster` is the picture shown before they click.
-export const hackathonHighlight = {
+// One entry per highlight; `poster` is used for event and social previews.
+export type Highlight = {
+  title: string;
+  tag: string;
+  text: string;
+  url: string;
+  poster: string;
+  posterAlt: string;
+  linkLabel: string;
+  videoSrc?: string;
+};
+
+export const hackathonHighlight: Highlight = {
   title: "2nd place — MoMo Mini App Hackathon",
   tag: "Fintech · Team of 5",
   text: "Our team built an app that helps people build a credit score by taking small loans from informal traders — a bridge between everyday borrowing and formal financial services. We placed 2nd out of the competing teams.",
@@ -9,6 +19,18 @@ export const hackathonHighlight = {
     "https://dms.licdn.com/playlist/vid/v2/D4D05AQGTZsVygnnwkg/thumbnail-with-play-button-overlay-high/B4DaBxFDQuJYC0-/0/1788603548136?e=2147483647&v=beta&t=AG0E6YEjKAEs5vcwJiRZ_kuva9iHXjnijJY7jZNRTUk",
   posterAlt: "Video still from the MoMo Mini App Hackathon",
   linkLabel: "Watch the moment on LinkedIn",
+  videoSrc: "/momo-video.mp4",
+};
+
+export const geekulchaHighlight: Highlight & { date: string } = {
+  title: "Geekulcha Hackathon",
+  tag: "Hackathon · Build for Use",
+  text: "Geekulcha was a blast. On to the next challenge.",
+  date: "2026-09-29",
+  url: "https://www.instagram.com/p/Dd5tIP1itZc/?img_index=1",
+  poster: "/geekulcha-hackathon.jpg",
+  posterAlt: "Speaking at the Geekulcha Hackathon",
+  linkLabel: "See the post on Instagram",
 };
 
 export const highlights = [hackathonHighlight];
