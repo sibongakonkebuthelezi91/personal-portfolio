@@ -1,5 +1,7 @@
 import awsSummitPhoto from "@/assets/aws-summit.jpg.asset.json";
 import awsSummitHallPhoto from "@/assets/aws-summit-hall.png.asset.json";
+import awsSandtonPhoto from "@/assets/aws-sandton.jpg.asset.json";
+import buildWithAiPhoto from "@/assets/build-with-ai.jpg.asset.json";
 import ytePresentationPhoto from "@/assets/yte-hackathon-presentation.jpg.asset.json";
 import yteAudiencePhoto from "@/assets/yte-hackathon-audience.jpg.asset.json";
 import yteWinnerPhoto from "@/assets/yte-hackathon-winner.jpg.asset.json";
@@ -42,6 +44,14 @@ const awsSummitHall: EventPhoto = {
   src: awsSummitHallPhoto.url,
   alt: "Working at laptops in the main hall of the AWS Summit",
 };
+const awsSandton: EventPhoto = {
+  src: awsSandtonPhoto.url,
+  alt: "At the AWS Cloud Event in Sandton",
+};
+const buildWithAi: EventPhoto = {
+  src: buildWithAiPhoto.url,
+  alt: "At the Build With AI event in Soweto",
+};
 
 // Oldest first — the timeline and the photo list both read in this order.
 export const events: SiteEvent[] = [
@@ -51,8 +61,8 @@ export const events: SiteEvent[] = [
     text: "Hacking AI with GDG Soweto — hands-on session exploring developer tooling, practical AI applications, and connecting with local developers.",
     date: "2026-04-11",
     postUrl: "https://www.linkedin.com/posts/sibongakonke-buthelezi-274b76344_activity-7448800481642151936-IpVk",
-    cover: null,
-    photos: [],
+    cover: buildWithAi,
+    photos: [buildWithAi],
   },
   {
     name: "AWS Cloud Event · Sandton",
@@ -60,8 +70,8 @@ export const events: SiteEvent[] = [
     text: "Attended an AWS Cloud gathering in Sandton exploring enterprise cloud architecture, AWS services, and developer best practices.",
     date: "2026-05-30",
     postUrl: "https://www.linkedin.com/posts/sibongakonke-buthelezi-274b76344_activity-7466531114040320002-G95M",
-    cover: null,
-    photos: [],
+    cover: awsSandton,
+    photos: [awsSandton],
   },
   {
     name: "YTE Hackathon",

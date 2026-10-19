@@ -3,7 +3,7 @@ import { SiteNav } from "@/components/SiteNav";
 import { HighlightCard } from "@/components/Highlight";
 import { Timeline } from "@/components/Timeline";
 import { highlights, featuredHighlight } from "@/data/highlights";
-import { events, timeline } from "@/data/events";
+import { timeline } from "@/data/events";
 import { profile } from "@/data/profile";
 
 const poster = featuredHighlight.poster;
@@ -55,44 +55,9 @@ function Gallery() {
         </p>
         <Timeline items={timeline} />
 
-        <div className="mt-16 flex flex-wrap items-end justify-between gap-3">
-          <h2 className="text-2xl">Every photo by event</h2>
-          <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="text-sm font-medium text-primary hover:underline">
-            More posts on LinkedIn →
-          </a>
-        </div>
-
-        <div className="mt-6 space-y-12">
-          {events.map((e) => (
-            <article key={e.name} className="grid gap-6 md:grid-cols-[2fr_1fr]">
-              <div className="grid gap-4 sm:grid-cols-2">
-                {e.photos.map((p) => (
-                  <img
-                    key={p.src}
-                    src={p.src}
-                    alt={p.alt}
-                    loading="lazy"
-                    className="aspect-video w-full rounded-lg object-cover"
-                  />
-                ))}
-              </div>
-              <div className="self-center">
-                <p className="font-mono text-sm font-semibold uppercase tracking-widest text-accent">{e.tag}</p>
-                <h3 className="mt-2 text-2xl">{e.name}</h3>
-                <p className="mt-2 text-muted-foreground">{e.text}</p>
-                <a
-                  href={e.postUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mt-4 inline-block text-sm font-medium text-primary hover:underline"
-                >
-                  Read the {e.name} post on LinkedIn →
-                </a>
-              </div>
-
-            </article>
-          ))}
-        </div>
+        <p className="mt-16 text-sm text-muted-foreground">
+          Want more behind-the-scenes? <a href={profile.linkedin} target="_blank" rel="noopener noreferrer" className="font-medium text-primary hover:underline">See all my posts on LinkedIn →</a>
+        </p>
       </main>
     </div>
   );
