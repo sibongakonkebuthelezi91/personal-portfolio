@@ -28,7 +28,7 @@ export function Timeline({ items }: { items: TimelineEntry[] }) {
                 src={item.cover.src}
                 alt={item.cover.alt}
                 loading="lazy"
-                className="h-72 w-full rounded-lg border bg-card object-cover object-top"
+                className={`h-72 w-full rounded-lg border bg-card object-cover ${item.coverClass ?? "object-top"}`}
               />
             ) : (
               <PhotoSlot label={`${item.title} — photo to come`} className="h-72" />

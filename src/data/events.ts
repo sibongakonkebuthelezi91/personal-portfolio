@@ -89,6 +89,8 @@ export type TimelineEntry = {
   tag: string;
   text: string;
   cover: EventPhoto | null;
+  /** Tailwind object-position class for the cover; defaults to object-top. */
+  coverClass?: string;
   url: string;
   linkLabel: string;
 };
@@ -113,6 +115,8 @@ export const timeline: TimelineEntry[] = [
     tag: hackathonHighlight.tag,
     text: hackathonHighlight.text,
     cover: { src: hackathonHighlight.poster, alt: hackathonHighlight.posterAlt },
+    // The video still is mostly ceiling above the stage, so frame from the bottom.
+    coverClass: "object-bottom",
     url: hackathonHighlight.url,
     linkLabel: hackathonHighlight.linkLabel,
   },
