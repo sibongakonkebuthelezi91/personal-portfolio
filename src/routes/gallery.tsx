@@ -3,7 +3,7 @@ import { SiteNav } from "@/components/SiteNav";
 import { HighlightCard } from "@/components/Highlight";
 import { Timeline } from "@/components/Timeline";
 import { highlights, featuredHighlight } from "@/data/highlights";
-import { events, timeline } from "@/data/events";
+import { timeline } from "@/data/events";
 import { profile } from "@/data/profile";
 
 const poster = featuredHighlight.poster;
