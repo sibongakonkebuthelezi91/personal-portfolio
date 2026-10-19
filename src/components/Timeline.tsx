@@ -24,12 +24,14 @@ export function Timeline({ items }: { items: TimelineEntry[] }) {
           </p>
           <div className="mt-4 grid gap-6 sm:grid-cols-[minmax(0,15rem)_1fr] sm:items-start">
             {item.cover ? (
-              <img
-                src={item.cover.src}
-                alt={item.cover.alt}
-                loading="lazy"
-                className={`h-72 w-full rounded-lg border bg-card object-cover ${item.coverClass ?? "object-top"}`}
-              />
+              <div className="h-72 w-full overflow-hidden rounded-lg border bg-card">
+                <img
+                  src={item.cover.src}
+                  alt={item.cover.alt}
+                  loading="lazy"
+                  className={`h-full w-full object-cover ${item.coverClass ?? "object-top"}`}
+                />
+              </div>
             ) : (
               <PhotoSlot label={`${item.title} — photo to come`} className="h-72" />
             )}
